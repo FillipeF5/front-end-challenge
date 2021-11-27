@@ -1,0 +1,179 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rebeccapurple;
+  color: #071723;
+}
+
+.box {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 10px 22px 34px 0 rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+  overflow: hidden;
+  width: 550px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header {
+  background: url(images/header.png) center right no-repeat;
+  background-size: cover;
+  height: 187px;
+  padding: 23px 36px;
+  width: 100%;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+header h1 strong {
+  font-size: 24px;
+  line-height: 1.46;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+form textarea {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 8px;
+  color: #071723;
+  height: 140px;
+  padding: 16px;
+  resize: none;
+  width: 100%;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+
+fieldset {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+}
+
+.wrapper{
+    margin-top: 10px;
+}
+.wrapper label {
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.wrapper p{
+    padding: 1px;
+    display: flex;
+    align-items: center;
+}
+
+
+.checkbox{
+    appearance: none;
+    background-color: #2F3676;
+    width: 24px; height: 24px;
+    margin: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox:before {
+    content: '';
+    position: absolute;
+    height: 10px; width: 10px;
+    background: none;
+    width: 4px;
+    margin: 25%;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+    transform: rotate(45deg);
+    bottom: 5%; left: 5%;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.checkbox:checked:before {
+    opacity: 1;
+}
+
+.counter {
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.counter svg {
+  fill: #2f3676;
+}
+
+.counter input {
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  height: 42px;
+  text-align: center;
+}
+
+.counter input::placeholder {
+    text-align: center;
+}
+
+footer {
+  padding: 35px;
+  background: #dde3e9;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer button {
+  appearance: none;
+  background: #2f3676;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 8px 32px;
+}
+
+footer button:focus,
+footer button:hover {
+  border: 2px solid #2F3676;
+  background-color: #191847;
+  cursor: pointer;
+}

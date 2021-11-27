@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Frontend VAGAS.com</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<div class="box">
+		<header>
+            <h1>Formulário<br />para compra de<br /><strong>Pacote de Stickers</strong></h1>
+        </header>
+
+		<form>
+
+			<fieldset>
+				<label>Quais stickers:</label>
+                <div class="wrapper">
+                    <p>
+                        <input type="checkbox" id="react" class="checkbox" checked/>
+                        <label for="react"> React</label>
+                    </p>
+                    
+                    <p><input type="checkbox" id="vue" class="checkbox"/>
+                    <label for="vue"> Vue</label></p>
+                    
+                    <p><input type="checkbox" id="angular" class="checkbox"/>
+                    <label for="angular"> Angular</label></p>
+                    
+                </div>
+            </fieldset>
+
+			
+			<fieldset>
+				<label>Quantos stickers de cada?</label>
+
+				<div class="counter">
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+						<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg>
+					<input type="text" placeholder="0" />
+					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42">
+						<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg>
+				</div>
+
+			</fieldset>
+
+
+			<fieldset>
+				<label>Observações:</label>
+
+				<textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
+			</fieldset>
+
+		</form>
+
+        <footer>
+            <button>Enviar</button>
+        </footer>
+
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+</html>
