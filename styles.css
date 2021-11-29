@@ -133,6 +133,16 @@ fieldset {
 
 .counter svg {
   fill: #2f3676;
+  cursor: pointer;
+}
+
+#mais, #menos {
+  width: 42px; height: 42px;
+  color: white;
+  background-color: #2f3676;
+  border-radius: 10px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .counter input {
@@ -145,6 +155,19 @@ fieldset {
   width: 60px;
   height: 42px;
   text-align: center;
+}
+
+.counter p{
+  background: #dde3e9;
+  border: 1px solid #2f3676;
+  border-radius: 7px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 8px;
+  width: 60px;
+  height: 42px;
+  text-align: center;
+  align-items: center;
 }
 
 .counter input::placeholder {
