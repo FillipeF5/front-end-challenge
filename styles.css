@@ -104,9 +104,8 @@ fieldset {
     border-radius: 3px;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 3px black;
 }
-
 .checkbox:before {
     content: '';
     position: absolute;
@@ -132,10 +131,6 @@ fieldset {
     margin: 10px 0;
 }
 
-.counter svg {
-  fill: #2f3676;
-  cursor: pointer;
-}
 
 #mais, #menos {
   width: 42px; height: 42px;
@@ -145,6 +140,15 @@ fieldset {
   font-size: 30px;
   cursor: pointer;
   border: none;
+  box-shadow: 0 0 3px black;
+}
+#menos:disabled {
+  cursor: not-allowed;
+  pointer-events: all;
+}
+
+#mais:hover, #menos:hover, .checkbox:hover{
+  background-color: #191847;
   box-shadow: 0 0 5px black;
 }
 
@@ -152,29 +156,12 @@ fieldset {
   background: #dde3e9;
   border: 1px solid #2f3676;
   border-radius: 7px;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 8px;
-  width: 60px;
-  height: 42px;
-  text-align: center;
-}
-
-.counter p{
-  background: #dde3e9;
-  border: 1px solid #2f3676;
-  border-radius: 7px;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 28px;
   margin: 0 8px;
   width: 60px;
   height: 42px;
   text-align: center;
   align-items: center;
-}
-
-.counter input::placeholder {
-    text-align: center;
 }
 
 footer {
@@ -184,10 +171,23 @@ footer {
   justify-content: flex-end;
 }
 
+footer #sucesso {
+  margin: auto;
+  color:rgb(75, 202, 75);
+  font-weight: bold;
+  display: none;
+}
+footer #erro { 
+  margin: auto;
+  color: #F59393;
+  font-weight: bold;
+  display:none;
+}
+
 footer button {
   appearance: none;
   background: #2f3676;
-  border: 0;
+  border: 1px;
   border-radius: 8px;
   color: #fff;
   padding: 10px;
@@ -199,7 +199,7 @@ footer button {
 
 footer button:focus,
 footer button:hover {
-  border: 2px solid #2F3676;
+  border: 1px solid #2F3676;
   background-color: #191847;
   cursor: pointer;
 }

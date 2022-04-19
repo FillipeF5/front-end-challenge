@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,64 +8,73 @@
     <title>Teste Frontend VAGAS.com</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-	<div class="box">
-		<header>
+    <div class="box">
+        <header>
             <h1>Formulário<br />para compra de<br /><strong>Pacote de Stickers</strong></h1>
         </header>
 
-		<form>
+        <form name="formulario">
 
-			<fieldset>
-				<label>Quais stickers:</label>
+            <fieldset>
+                <label>Quais stickers:</label>
                 <div class="wrapper">
                     <p>
-                        <input type="checkbox" id="react" class="checkbox" checked/>
+                        <input type="checkbox" id="react" name="react" class="checkbox" />
                         <label for="react"> React</label>
                     </p>
-                    
-                    <p><input type="checkbox" id="vue" class="checkbox"/>
-                    <label for="vue"> Vue</label></p>
-                    
-                    <p><input type="checkbox" id="angular" class="checkbox"/>
-                    <label for="angular"> Angular</label></p>
-                    
+
+                    <p>
+                        <input type="checkbox" id="vue" name="vue" class="checkbox" />
+                        <label for="vue"> Vue</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="angular" name="angular" class="checkbox" />
+                        <label for="angular"> Angular</label>
+                    </p>
+
                 </div>
             </fieldset>
 
-			
-			<fieldset>
-				<label>Quantos stickers de cada?</label>
 
-				<div class="counter">
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" id="menos">
-						<path d="M4.667 0A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667zm28 23.333H9.333v-4.666h23.334v4.666z" /></svg> -->
-					<button type="" id="menos">-</button>
-					<!-- <input type="number" placeholder="0" id="contador" value="0"/> -->
-					<p id="contador"></p>
-					<button type="" id="mais">+</button>
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" id="mais">
-						<path d="M4.667 42h32.666A4.668 4.668 0 0 0 42 37.333V4.667A4.668 4.668 0 0 0 37.333 0H4.667A4.668 4.668 0 0 0 0 4.667v32.666A4.668 4.668 0 0 0 4.667 42zm4.666-23.333h9.334V9.333h4.666v9.334h9.334v4.666h-9.334v9.334h-4.666v-9.334H9.333v-4.666z" /></svg> -->
-				</div>
+            <fieldset>
+                <label>Quantos stickers de cada?</label>
 
-			</fieldset>
+                <div class="counter">
+
+                    <button id="menos">-</button>
+                    <input id="contador" value="0">
+                    <button id="mais">+</button>
+
+                </div>
+
+            </fieldset>
 
 
-			<fieldset>
-				<label>Observações:</label>
+            <fieldset>
+                <label>Observações:</label>
 
-				<textarea name="descricao" placeholder="Alguma dúvida? Recado?"></textarea>
-			</fieldset>
+                <textarea name="textarea" id="textarea" placeholder="Alguma dúvida? Recado?"></textarea>
+            </fieldset>
 
-		</form>
 
-        <footer>
-            <button>Enviar</button>
-        </footer>
 
-	</div>
+            <footer>
 
-	<script src="index.js"></script>
+                <p id="sucesso">Formulário enviado com sucesso !</p>
+                <p id="erro">Há erros no formulário !</p>
+
+                <button type="submit" id="enviar" value="enviar">Enviar</button>
+
+            </footer>
+        </form>
+
+    </div>
+
+    <script src="validacao.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
