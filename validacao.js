@@ -7,31 +7,34 @@ var vue = document.getElementById("vue");
 var angular = document.getElementById("angular");
 
 
-function Load() {
-    function validar(e) {
-        if (!react.checked && !vue.checked && !angular.checked) {
-            alert("ERRO CHECKBOX")
-            return false;
-        }
-    
-        if (input.value == 0) {
-            input.style.backgroundColor = "#F59393";
-            erro.style.display = "initial";
-            sucesso.style.opacity = "0";
-            return false;
-        }
-    
-        if (textarea.value.length < 1) {
-            alert("O campo observações deve ser preenchido");
-            return false;
-        }
-    
-        alert("sucesso")
-        sucesso.style.display = "initial";
-        e.preventDefault();
-    };
 
-    enviar.onclick = function() {
-        validar();
-    };
-}
+function validar(e) {
+    if (!react.checked && !vue.checked && !angular.checked) {
+        erro.style.display = "initial";
+        sucesso.style.opacity = "0";
+        alert("Deve selecionar ao menos 1 sticker")
+        return false;
+    }
+
+    if (input.value == 0) {
+        input.style.backgroundColor = "#F59393";
+        erro.style.display = "initial";
+        sucesso.style.opacity = "0";
+        return false;
+    }
+
+    if (textarea.value.length < 1) {
+        erro.style.display = "initial";
+        sucesso.style.opacity = "0";
+        
+        return false;
+    }
+
+    sucesso.style.display = "initial";
+
+};
+
+enviar.onclick = function (e) {
+    validar();
+    e.preventDefault();
+};

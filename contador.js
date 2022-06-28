@@ -5,24 +5,25 @@ var input = document.getElementById('contador');
 var somandoInput = function () {input.value = ++input.value}
 var subtraindoInput = function () {input.value = --input.value}
 
+function Load(e) {
+    mais.addEventListener('click', function (e) {
+        somandoInput()
+        e.preventDefault();
+        if (input.value + 1 > 0) {
+            menos.disabled = false;
+            menos.style.opacity = "1"
+        }
+    }); 
 
-mais.addEventListener('click', function (event) {
-    somandoInput()
-    event.preventDefault();
-    if (input.value + 1 > 0) {
-        menos.disabled = false;
-        menos.style.opacity = "1"
-    }
-}); 
+    menos.addEventListener('click', function (e) {
 
-menos.addEventListener('click', function (event) {
+        if (input.value < 1 ) {
+            menos.setAttribute("disabled", "disabled");
+            menos.style.opacity = ".2"
 
-    if (input.value < 1) {
-        menos.setAttribute("disabled", "disabled");
-        menos.style.opacity = ".2"
-
-    } else {
-        subtraindoInput()
-    }
-    event.preventDefault();
-});
+        } else {
+            subtraindoInput()
+        }
+        e.preventDefault();
+    });
+};
